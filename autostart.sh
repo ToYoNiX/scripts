@@ -1,9 +1,8 @@
 #!/bin/bash
 #
 
-swaybg -i ~/Pictures/Wallpapers/wallhaven-7j3lve.png &
+swaybg -i  $(cat ~/.cache/wal/wal) &
 flatpak run com.discordapp.Discord --start-minimized &
 nextcloud &
-lxpolkit &
 swhks &
 swhkd
