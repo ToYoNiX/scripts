@@ -1,17 +1,17 @@
 #!/bin/bash
 #
 
-BAT="/sys/class/power_supply/BAT0"
+BAT_LOCATION="/sys/class/power_supply/BAT0"
 
 while true
 do
     output=""
-    output=$output\ $(date)
+    output=$output\ $(date +"%a %b %e %Y %I:%M:%S %p")
 
-    if [ -d $BAT ]
+    if [ -d $BAT_LOCATION ]
     then
-        PERCENTAGE=BAT:\ $(cat $BAT/capacity)%
-        output=$PERCENTAGE\ \|\ $output
+        BAT=BAT:\ $(cat $BAT_LOCATION/capacity)%\ -\ $(cat $BAT_LOCATION/status)
+        output=$BAT\ \|\ $output
     fi
 
     echo $output
