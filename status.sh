@@ -10,7 +10,7 @@ do
 
     if [ -d $BAT_LOCATION ]
     then
-        BAT=BAT:\ $(cat $BAT_LOCATION/capacity)%\ -\ $(cat $BAT_LOCATION/status)
+        BAT=BAT:\ $(cat $BAT_LOCATION/capacity)%\ $(cat $BAT_LOCATION/status)
         output=$BAT\ \|\ $output
     fi
 
