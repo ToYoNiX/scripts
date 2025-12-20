@@ -14,6 +14,6 @@ do
         output=$BAT\ \|\ $output
     fi
 
-    echo $output
+    echo \ $output
     sleep 5
 done
