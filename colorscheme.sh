@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-color_count=20
+color_count=16
 img_size_perc=25
 
 declare -a colors
@@ -13,3 +13,10 @@ do
     ((i++))
 done
 
+mkdir -p ~/.cache/colorscheme/
+
+cat << EOF > ~/.cache/colorscheme/dwl
+0x${colors[15]}ff 0x${colors[0]}ff 0x${colors[8]}ff
+0x${colors[15]}ff 0x${colors[2]}ff 0x${colors[15]}ff
+0x${colors[15]}ff 0x${colors[1]}ff 0x${colors[1]}ff
+EOF
