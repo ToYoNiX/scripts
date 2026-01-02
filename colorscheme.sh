@@ -37,3 +37,25 @@ selection-text=${colors[15]}FF
 selection-match=${colors[8]}FF
 border=${colors[1]}FF
 EOF
+
+cat << EOF > $output_path/foot
+[colors]
+background=${colors[0]}
+foreground=${colors[15]}
+regular0=${colors[0]}
+regular1=${colors[1]}
+regular2=${colors[2]}
+regular3=${colors[3]}
+regular4=${colors[4]}
+regular5=${colors[5]}
+regular6=${colors[6]}
+regular7=${colors[7]}
+bright0=${colors[8]}
+bright1=${colors[9]}
+bright2=${colors[10]}
+bright3=${colors[11]}
+bright4=${colors[12]}
+bright5=${colors[13]}
+bright6=${colors[14]}
+bright7=${colors[15]}
+EOF
